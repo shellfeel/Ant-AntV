@@ -1,0 +1,11 @@
+resource/*.*
+/venv/
+module/
+dist/
+build/
+bean_raw/*.bin
+__pycache__/
+.idea/
+spec/
+step2.py
+

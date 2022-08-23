@@ -16,7 +16,7 @@ https://github.com/shellfeel/Ant-AntV
 
 1. 执行pip install -r requirements
 2. 将cs、msf生成的shellcode命名成`beacon.bin` 放到当前bean_raw路径下
-3. (可选)如需给程序加上icon，可以将icon命名成`mail_update.icon`(可修改gen_trojan.py 48行形参out_file_name 来更改，这个参数本身也是生成的程序名)放入resource目录
+3. (可选)如需给程序加上icon，可以将icon命名成`mail_update.ico`(可修改gen_trojan.py 48行形参out_file_name 来更改，这个参数本身也是生成的程序名)放入resource目录
 4. 执行`gen_trojan.py`脚本
 
 ## 优缺点

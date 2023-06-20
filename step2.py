@@ -2,7 +2,7 @@ import base64
 import threading
 import time
 from hashlib import sha256
-
+from sys import exit
 import psutil
 from multiprocessing import cpu_count
 from socket import gethostname
